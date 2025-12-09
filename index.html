@@ -27,19 +27,19 @@ body {
 /* 5/7/5 の縦書きタイトル */
 .title {
   writing-mode: vertical-rl;
+  font-size: 5rem;
+  line-height: 1.6;
+  letter-spacing: 0.2rem;
   display: flex;
-  flex-direction: row; /* 横方向に3列並べる */
-  justify-content: flex-start; /* 左揃え（縦書きなので頭揃え） */
-  align-items: flex-start;      /* 上揃え */
-  gap: 3rem; /* 行間の代わりに列間 */
+  flex-direction: column; /* ← これで縦方向に積む */
+  align-items: flex-start; /* ← 上揃え + 左側揃え */
   margin-bottom: 3rem;
 }
 
 .line {
-  font-size: 5rem;
-  line-height: 1.6;
-  letter-spacing: 0.2rem;
+  display: block;
 }
+
 
 
 /* 中くらいのキャプション */
@@ -60,11 +60,12 @@ body {
 
 <body>
 
-<div class="title">
+<div class="title fadein">
   <div class="line">頑張れば</div>
   <div class="line">いつか飛べると</div>
   <div class="line">思ってた</div>
 </div>
+
 
 
 <div class="caption">
