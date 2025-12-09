@@ -27,11 +27,20 @@ body {
 /* 5/7/5 の縦書きタイトル */
 .title {
   writing-mode: vertical-rl;
-  font-size:5rem;
-  line-height:1.6;
+  display: flex;
+  flex-direction: row; /* 横方向に3列並べる */
+  justify-content: flex-start; /* 左揃え（縦書きなので頭揃え） */
+  align-items: flex-start;      /* 上揃え */
+  gap: 3rem; /* 行間の代わりに列間 */
   margin-bottom: 3rem;
+}
+
+.line {
+  font-size: 5rem;
+  line-height: 1.6;
   letter-spacing: 0.2rem;
 }
+
 
 /* 中くらいのキャプション */
 .caption {
@@ -52,10 +61,11 @@ body {
 <body>
 
 <div class="title">
-頑張れば<br>
-いつか飛べると<br>
-思ってた
+  <div class="line">頑張れば</div>
+  <div class="line">いつか飛べると</div>
+  <div class="line">思ってた</div>
 </div>
+
 
 <div class="caption">
 中身が違えば飛べないんだって。<br>
