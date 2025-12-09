@@ -1,92 +1,72 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>作品タイトル</title>
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>作品キャプション</title>
 <style>
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
+  body {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Hiragino Sans", "ヒラギノ角ゴ ProN", "Noto Sans JP", sans-serif;
+    text-align: center;
+  }
 
-body {
-  background: black;
-  color: white;
-  font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
-  text-align: center;
-  padding: 4rem 1.2rem;
-  box-sizing: border-box;
-}
+  /* タイトル */
+  .title {
+    font-size: 40px;
+    line-height: 1.4em;
+    font-weight: 400;
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+  }
 
-/* ---------------------------
-   フェード
-   --------------------------- */
-.fadein {
-  opacity: 0;
-  animation: fadeIn 1.2s forwards ease;
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.delay-1 { animation-delay: .7s; }
-.delay-2 { animation-delay: 1.4s; }
+  /* キャプションとmetaまとめて */
+  .caption-group {
+    margin-top: 32px;
+    font-size: 18px;
+    line-height: 1.8em;
+    font-weight: 300; /* 細め */
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+    animation-delay: 0.7s; /* タイトル後に表示 */
+  }
 
-/* ---------------------------
-   タイトル
-   --------------------------- */
-.title-wrap {
-  margin: 0 auto 2.2rem auto;
-  max-width: 80vw;
-}
+  .meta {
+    font-size: 14px;
+    margin-top: 16px;
+    opacity: 0.9;
+  }
 
-.title-line1,
-.title-line2 {
-  font-size: clamp(1.6rem, 4vw, 2.6rem);
-  line-height: 1.25;
-  margin: 0;
-  letter-spacing: 0.05em;
-}
-
-/* ---------------------------
-   キャプション（細丸ゴ）
-   --------------------------- */
-.caption {
-  font-family: "Hiragino Sans W1", "Yu Gothic Light", sans-serif;
-  font-size: clamp(.95rem, 2vw, 1.3rem);
-  line-height: 1.8;
-  max-width: 72ch;
-  margin: 0 auto 1.8rem auto;
-}
-
-/* ---------------------------
-   メタ情報（細丸ゴ）
-   --------------------------- */
-.meta {
-  font-family: "Hiragino Sans W1", "Yu Gothic Light", sans-serif;
-  font-size: clamp(.75rem, 1.5vw, 1rem);
-  opacity: .75;
-}
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
 </style>
 </head>
-
 <body>
 
-<div class="title-wrap fadein">
-  <div class="title-line1">頑張れば</div>
-  <div class="title-line2">いつか飛べると思ってた</div>
+<!-- ===== Title ===== -->
+<div class="title">
+  頑張れば<br>
+  いつか飛べると思ってた
 </div>
 
-<div class="caption fadein delay-1">
-  中身が違えば飛べないんだって。<br>
-  理解しても、納得できるまでは時間がかかった。
-</div>
-
-<div class="meta fadein delay-2">
-  風船、扇風機、努力(肺活量) / 2025
+<!-- ===== Caption + Meta ===== -->
+<div class="caption-group">
+  <div class="caption">
+    中身が違えば飛べないんだって。<br>
+    理解しても、納得できるまでは時間がかかった。
+  </div>
+  <div class="meta">
+    風船、扇風機、努力(肺活量)/2025
+  </div>
 </div>
 
 </body>
