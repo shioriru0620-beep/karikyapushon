@@ -7,22 +7,20 @@
 
 <style>
 /* ---------------------------
-   背景・基本レイアウト
+   基本レイアウト
    --------------------------- */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
+
 body {
   background: black;
   color: white;
   font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  padding: 2rem;
+  padding: 4rem 1.2rem;
   box-sizing: border-box;
   opacity: 0;
   animation: fadeInBody 1s forwards ease;
@@ -34,7 +32,7 @@ body {
 }
 
 /* ---------------------------
-   フェードイン（要素）
+   フェードイン
    --------------------------- */
 .fadein {
   opacity: 0;
@@ -44,18 +42,15 @@ body {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-.delay-1 { animation-delay: 0.8s; }
+.delay-1 { animation-delay: .8s; }
 .delay-2 { animation-delay: 1.6s; }
 
 /* ---------------------------
-   タイトル（2行・中央揃え）
+   タイトル
    --------------------------- */
 .title-wrap {
-  width: min(70ch, 80vw);
   margin: 0 auto 2rem auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 80vw;
 }
 
 .title-line1 {
@@ -63,14 +58,12 @@ body {
   line-height: 1.05;
   letter-spacing: 0.06em;
   margin: 0;
-  white-space: nowrap;
 }
 
 .title-line2 {
   font-size: clamp(1.4rem, 4vw, 2.2rem);
   line-height: 1.3;
   margin-top: .5rem;
-  white-space: nowrap;
 }
 
 /* ---------------------------
@@ -81,23 +74,19 @@ body {
   line-height: 1.7;
   max-width: 70ch;
   margin: 0 auto 1.6rem auto;
-  text-align: center;
 }
 
 /* ---------------------------
-   素材 / 年
+   メタ情報
    --------------------------- */
 .meta {
   font-size: clamp(.75rem, 1.5vw, 1rem);
-  opacity: 0.75;
-  text-align: center;
+  opacity: .75;
 }
 </style>
 
 </head>
 <body>
-
-<!-- ▼▼ ここだけ必要に応じて書き換えてください ▼▼ -->
 
 <div class="title-wrap fadein">
   <div class="title-line1">頑張れば</div>
@@ -112,8 +101,6 @@ body {
 <div class="meta fadein delay-2">
   風船、扇風機、努力(肺活量) / 2025
 </div>
-
-<!-- ▲▲ ここだけ変更 ▲▲ -->
 
 </body>
 </html>
