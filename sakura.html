@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>作品キャプション</title>
+<style>
+body {
+background-color: #000;
+color: #fff;
+margin: 0;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+/* ===== フォント指定 ===== */
+.title {
+font-family: "Hiragino Mincho ProN", "Yu Mincho", "游明朝体", "Noto Serif JP", serif;
+font-size: 30px; /* 少し調整 */
+line-height: 1.45em;
+font-weight: 500;
+opacity: 0;
+animation: fadeIn 1.2s ease forwards;
+}
+
+.caption-group {
+margin-top: 32px;
+font-family: "Hiragino Sans", "ヒラギノ角ゴ ProN", "Noto Sans JP", sans-serif;
+font-size: 16px; /* 一段階小さく */
+line-height: 1.8em;
+font-weight: 300; /* 細め */
+opacity: 0;
+animation: fadeIn 1.2s ease forwards;
+animation-delay: 0.7s;
+}
+
+.meta {
+font-size: 13px; /* 小さめ */
+margin-top: 14px;
+opacity: 0.9;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; }
+to   { opacity: 1; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Title ===== -->
+<div class="title">
+ここに見る<br>
+遠い記憶の　人と夢
+</div>
+
+<!-- ===== Caption + Meta ===== -->
+<div class="caption-group">
+<div class="caption">
+忘れない。<br>
+失いながら生きる上での、ちょっとの抵抗。
+</div>
+<div class="meta">
+映像/2025
+</div>
+</div>
+
+</body>
+</html>
